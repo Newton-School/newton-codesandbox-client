@@ -23,7 +23,7 @@ const DEV_URLS = {
 const PROD_URLS = {
   packager:
     'https://aiwi8rnkp5.execute-api.eu-west-1.amazonaws.com/prod/packages',
-  bucket: 'https://prod-packager-packages.codesandbox.io',
+  bucket: 'https://d19njnj6gdcz3s.cloudfront.net',
 };
 
 const URLS = PROD_URLS;
