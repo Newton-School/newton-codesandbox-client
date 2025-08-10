@@ -5,7 +5,7 @@ self.importScripts([
   'https://cdnjs.cloudflare.com/ajax/libs/typescript/2.7.2/typescript.min.js',
 ]);
 
-const ROOT_URL = `https://cdn.jsdelivr.net/`;
+const ROOT_URL = `https://d1o1ymldlm5b10.cloudfront.net/`;
 
 const loadedTypings = [];
 
@@ -101,7 +101,7 @@ const tempTransformFiles = files => {
 
 const getFileMetaData = (dependency, version, depPath) =>
   doFetch(
-    `https://data.jsdelivr.com/v1/package/npm/${dependency}@${version}/flat`
+    `https://d1au00nsa3haqe.cloudfront.net/v1/package/npm/${dependency}@${version}/flat`
   )
     .then(response => JSON.parse(response))
     .then(response => response.files.filter(f => f.name.startsWith(depPath)))
@@ -158,7 +158,7 @@ const getFileTypes = (
 };
 
 function fetchFromMeta(dependency, version, fetchedPaths) {
-  const depUrl = `https://data.jsdelivr.com/v1/package/npm/${dependency}@${version}/flat`;
+  const depUrl = `https://d1au00nsa3haqe.cloudfront.net/v1/package/npm/${dependency}@${version}/flat`;
   return doFetch(depUrl)
     .then(response => JSON.parse(response))
     .then(meta => {
@@ -183,7 +183,7 @@ function fetchFromMeta(dependency, version, fetchedPaths) {
       return Promise.all(
         dtsFiles.map(file =>
           doFetch(
-            `https://cdn.jsdelivr.net/npm/${dependency}@${version}${file}`
+            `https://d1o1ymldlm5b10.cloudfront.net/npm/${dependency}@${version}${file}`
           )
             .then(dtsFile =>
               addLib(`node_modules/${dependency}${file}`, dtsFile, fetchedPaths)
@@ -240,7 +240,7 @@ async function fetchAndAddDependencies(dependencies) {
           loadedTypings.push(dep);
 
           const depVersion = await doFetch(
-            `https://data.jsdelivr.com/v1/package/resolve/npm/${dep}@${dependencies[dep]}`
+            `https://d1au00nsa3haqe.cloudfront.net/v1/package/resolve/npm/${dep}@${dependencies[dep]}`
           )
             .then(x => JSON.parse(x))
             .then(x => x.version);
