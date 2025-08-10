@@ -16,7 +16,7 @@ const imageExists = async (url: string): Promise<boolean> =>
     .catch(() => false);
 
 const base =
-  'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons';
+  'https://d1o1ymldlm5b10.cloudfront.net/gh/PKief/vscode-material-icon-theme@master/icons';
 export const getIconURL = async (type: string): Promise<string> => {
   const defaultURL = `${base}/${type}.svg`;
   const URLByType = {

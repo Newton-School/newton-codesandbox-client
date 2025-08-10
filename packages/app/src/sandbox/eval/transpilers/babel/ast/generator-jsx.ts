@@ -1,5 +1,5 @@
 /**
- * Derived from https://unpkg.com/browse/astring-jsx@1.0.1/index.js
+ * Derived from https://d1ks0e82elkklw.cloudfront.net/browse/astring-jsx@1.0.1/index.js
  */
 
 export default {

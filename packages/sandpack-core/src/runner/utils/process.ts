@@ -1,5 +1,5 @@
 /* eslint-disable */
-// from https://unpkg.com/process@0.11.10/browser.js
+// from https://d1ks0e82elkklw.cloudfront.net/process@0.11.10/browser.js
 
 const process: any = {};
 

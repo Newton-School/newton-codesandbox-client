@@ -31,7 +31,7 @@ self.window.document = {
   head: { appendChild: () => {}, removeChild: () => {} },
 };
 
-// self.importScripts('https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js');
+// self.importScripts('https://d1o1ymldlm5b10.cloudfront.net/npm/less@4.1.1/dist/less.min.js');
 self.importScripts(
   `${process.env.CODESANDBOX_HOST || ''}/static/js/less-4.1.2.min.js`
 );

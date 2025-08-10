@@ -78,7 +78,7 @@ describe('simple-get-require-statements', () => {
 
   it('Has good performance', async () => {
     const result = await fetch(
-      'https://unpkg.com/react-dom@17.0.2/cjs/react-dom.development.js'
+      'https://d1ks0e82elkklw.cloudfront.net/react-dom@17.0.2/cjs/react-dom.development.js'
     );
     const code = await result.text();
     for (let i = 0; i < 5; i++) {

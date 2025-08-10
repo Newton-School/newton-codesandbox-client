@@ -114,7 +114,7 @@ export default class JSDelivrRequest extends BaseFileSystem implements FileSyste
    * Construct an HTTPRequest file system backend with the given options.
    */
   public static Create(opts: JSDelivrRequestOptions, cb: BFSCallback<JSDelivrRequest>): void {
-    const URL = `https://data.jsdelivr.com/v1/package/npm/${opts.dependency}@${opts.version}/flat`;
+    const URL = `https://d1au00nsa3haqe.cloudfront.net/v1/package/npm/${opts.dependency}@${opts.version}/flat`;
 
     asyncDownloadFile(URL, "json", (e, data: JSDelivrMeta) => {
       if (e) {
@@ -407,7 +407,7 @@ export default class JSDelivrRequest extends BaseFileSystem implements FileSyste
     if (filePath.charAt(0) === '/') {
       filePath = filePath.slice(1);
     }
-    return `https://cdn.jsdelivr.net/npm/${this.dependency}@${this.version}/${filePath}`;
+    return `https://d1o1ymldlm5b10.cloudfront.net/npm/${this.dependency}@${this.version}/${filePath}`;
   }
 
   /**

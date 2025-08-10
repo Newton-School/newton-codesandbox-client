@@ -16,7 +16,7 @@ function stripURLAndLine(s: string) {
  * };
  * ```
  *
- * from https://unpkg.com/resolve@1.10.0/lib/caller.js
+ * from https://d1ks0e82elkklw.cloudfront.net/resolve@1.10.0/lib/caller.js
  *
  * but it's made to work in Firefox too  (doesn't have prepareStackTrace sadly)
  */

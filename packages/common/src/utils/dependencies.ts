@@ -29,7 +29,7 @@ interface JsDelivrApiResult {
 
 async function fetchAllVersions(dep: string): Promise<JsDelivrApiResult> {
   return fetchWithRetries<JsDelivrApiResult>(
-    `https://data.jsdelivr.com/v1/package/npm/${dep}`
+    `https://d1au00nsa3haqe.cloudfront.net/v1/package/npm/${dep}`
   );
 }
 
@@ -39,7 +39,7 @@ const resolveVersionFromUnpkg = (
   version: string
 ): Promise<string> => {
   return fetchWithRetries(
-    `https://unpkg.com/${dep}@${encodeURIComponent(version)}/package.json`
+    `https://d1ks0e82elkklw.cloudfront.net/${dep}@${encodeURIComponent(version)}/package.json`
   ).then(x => x.version);
 };
 

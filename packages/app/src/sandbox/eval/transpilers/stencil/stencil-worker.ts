@@ -24,12 +24,12 @@ const loadStencilVersion = (version: string) => {
     loadedStencilVersion = version;
 
     ctx.importScripts(
-      `https://unpkg.com/@stencil/core@${version}/compiler/stencil.js`
+      `https://d1ks0e82elkklw.cloudfront.net/@stencil/core@${version}/compiler/stencil.js`
     );
   }
 };
 
-ctx.importScripts('https://unpkg.com/typescript@3.5.3/lib/typescript.js');
+ctx.importScripts('https://d1ks0e82elkklw.cloudfront.net/typescript@3.5.3/lib/typescript.js');
 
 async function compileStencil(data) {
   const { code, path, stencilVersion } = data;

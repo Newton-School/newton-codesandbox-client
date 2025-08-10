@@ -85,10 +85,10 @@ class ReasonTranspiler extends Transpiler {
   ): Promise<{ transpiledCode: string }> {
     if (!global.ocaml) {
       await addScript(
-        'https://cdn.jsdelivr.net/gh/jaredly/reason-react@more-docs/docs/bucklescript.js'
+        'https://d1o1ymldlm5b10.cloudfront.net/gh/jaredly/reason-react@more-docs/docs/bucklescript.js'
       );
       await addScript('https://reason.surge.sh/bucklescript-deps.js');
-      await addScript('https://unpkg.com/reason@3.3.4/refmt.js');
+      await addScript('https://d1ks0e82elkklw.cloudfront.net/reason@3.3.4/refmt.js');
     }
 
     const reasonModules = loaderContext
